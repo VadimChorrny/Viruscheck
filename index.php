@@ -21,11 +21,6 @@
             Viruscheck
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -43,7 +38,20 @@
 </header>
 <!--Main Navigation-->
 <main>
-    <h1>Here i will build some presentation login for user</h1>
+    <form action="" method="post">
+        <input class="form-control" type="file" id="formFile">
+        <button type="submit" class="btn btn-primary">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            Scan File
+        </button>
+        <div class="wrapper">
+            <img src="./templates/images/cloud.png" alt="upload-image">
+            <h1>Scan A File</h1>
+            <p>Select your file in order to scan your file with over 26 anti-viruses.</p>
+        </div>
+    </form>
 </main>
 <!--<a href="./templates/main.php">Go to scan your file</a>-->
 <!-- JavaScript Bundle with Popper -->

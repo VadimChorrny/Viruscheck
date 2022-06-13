@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </div>
-        <a href="templates/login.php">
+        <a href="login.php">
             <button class="btn btn-outline-info" id="login" type="button">Login</button>
         </a>
     </nav>
