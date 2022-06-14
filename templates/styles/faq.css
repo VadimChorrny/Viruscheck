@@ -1,0 +1,75 @@
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+nav button {
+    margin-right: 15px;
+}
+
+main{
+    margin-top: 5%;
+}
+
+#login {
+    width: 200px;
+}
+
+.faq-section {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 52px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+details {
+    cursor: pointer;
+}
+
+h4 {
+    width: 760px;
+}
+
+summary {
+    font-size: 20px;
+    display: flex;
+    justify-item: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+
+summary::marker {
+    display: none;
+    content: "";
+}
+
+span {
+    margin-top: 4px;
+}
+
+details > p {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 155%;
+    letter-spacing: .1px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+hr {
+    color: #313133;
+    margin-block: 20px;
+}

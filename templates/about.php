@@ -41,6 +41,8 @@
         </a>
     </nav>
 </header>
-    <h1>That's about page!</h1>
+<main>
+    <img src="images/monkey.jpg" alt="monkey-img" width="450">
+</main>
 </body>
 </html>

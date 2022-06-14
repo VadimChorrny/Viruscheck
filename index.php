@@ -1,3 +1,13 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $file = trim($_POST["scan_file"]);
+    if ($file) {
+        header('location: templates/result.php');
+
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
