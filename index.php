@@ -1,10 +1,6 @@
 <?php
 //if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//    $file = trim($_POST["scan_file"]);
-//    if ($file) {
-//        header('location: templates/result.php');
-//
-//    }
+//    header('location: templates/result.php');
 //}
 //?>
 
@@ -50,16 +46,17 @@
         </a>
     </nav>
 </header>
+
 <!--Main Navigation-->
 <main>
-    <form action="" method="post" name="upload_form" onsubmit="return validateForm()">
-        <input class="form-control" name="file" onchange="getData()" id="scan_file" type="file" id="formFile">
+    <form action="" method="post" name="upload_form">
+        <input class="form-control" name="scan_file" id="scan_file" onchange="getData()" type="file" id="formFile">
         <input class="form-control" name="apiKey" type="hidden">
         <input class="form-control" name="task_type" type="hidden">
         <input class="form-control" name="engines" type="hidden">
         <input class="form-control" name="response_type" type="hidden">
 
-        <button type="submit" class="btn btn-primary" onclick="check()" id="btn-scan">
+        <button type="submit" class="btn btn-primary" id="btn-scan">
             Scan File
         </button>
         <div class="wrapper">
@@ -69,7 +66,9 @@
         </div>
     </form>
 </main>
+
 <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
