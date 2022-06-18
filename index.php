@@ -50,18 +50,19 @@
 <!--Main Navigation-->
 <main>
     <form action="" method="post" name="upload_form">
-        <input class="form-control" name="scan_file" id="scan_file" onchange="getData()" type="file" id="formFile">
+        <input class="form-control" name="scan_file" id="scan_file" onchange="getData()" type="file" id="formFile" required>
         <input class="form-control" name="apiKey" type="hidden">
         <input class="form-control" name="task_type" type="hidden">
         <input class="form-control" name="engines" type="hidden">
         <input class="form-control" name="response_type" type="hidden">
 
-        <button type="submit" class="btn btn-primary" id="btn-scan">
+        <button type="submit"  class="btn btn-primary" id="btn_scan">
             Scan File
         </button>
+
         <div class="wrapper">
             <img src="./templates/images/cloud.png" alt="upload-image">
-            <h1 onclick="uploadFile()">Scan A File</h1>
+            <h1>Scan A File</h1>
             <p>Select your file in order to scan your file with over 26 anti-viruses.</p>
         </div>
     </form>
@@ -69,10 +70,10 @@
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-<script src="templates/scripts/file_upload_animation.js"></script>
 <script src="templates/scripts/avcheck.js"></script>
 </body>
 </html>

@@ -96,6 +96,5 @@ function initValues () {
 
 
 function getResponse(){
-    
    initValues();
-} 
+}
