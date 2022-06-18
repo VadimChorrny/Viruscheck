@@ -3,8 +3,6 @@ const currFile = document.getElementById('scan_file');
 const url = 'http://avcheck.net/vhm/api/v1/check/new/';
 
 
-
-
 const getData = () => {
 
     let formData = new FormData();
@@ -25,10 +23,11 @@ const getData = () => {
             console.log(error);
         });
 
-    setTimeout(()=>{
-        console.log(res);
-
+    setTimeout(() => {
+        console.log('Result: ',res);
+        console.log('Current file: ',currFile.files[0].name);
         localStorage.setItem('response', JSON.stringify(res));
+        localStorage.setItem('currFile',currFile.files[0].name)
     }, 10000);
 
 }
