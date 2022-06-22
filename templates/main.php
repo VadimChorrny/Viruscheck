@@ -18,10 +18,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/result.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
 <body>
 <header>
-    <nav class="navbar bg-light">
+    <nav class="navbar navbar-expand-lg bg-light">
         <!-- Navbar content -->
         <a class="navbar-brand" href="../index.php">
             <img src="images/key.png" width="30" height="30" alt="">
@@ -36,13 +39,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <li class="nav-item">
                     <a class="nav-link" href="/templates/faq.php">FAQ</a>
                 </li>
-                <li clas="nav-item">
-                    <a href="reset-password.php" class="btn">Reset Your Password</a>
-                </li>
             </ul>
         </div>
-        <a href="logout.php" class="btn btn-danger mr-3">
-            Sign Out of Your Account
+        <a href="account.php" class="btn btn-outline-info mr-3 d-flex align-items-center">
+            <ion-icon class="mr-1" name="briefcase-outline"></ion-icon>My Profile
         </a>
     </nav>
 </header>
@@ -53,8 +53,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <button class="btn btn-success d-flex justify-content-center align-items-center" onclick="getResponse()">Show result after scanning...</button>
 </p>
 
-<main class="main_container"
-      style="display:flex; justify-content: center; align-items: center; gap: 20%; margin-top: 10%;">
+<main id="main"
+      style="display:flex; justify-content: center; align-items: center; gap: 20%; margin-top: 5%; opacity: 0">
     <div class="leftColumn">
         <div class="leftBlock">
             <img src="images/icons/adaware.png">

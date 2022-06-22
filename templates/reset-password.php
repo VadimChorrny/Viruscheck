@@ -76,13 +76,68 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Reset Password</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <style>
-        body{ font: 14px sans-serif; }
+        header {
+            width: 100%;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .navbar-brand {
+            margin-left: 15px;
+        }
+
+        nav a {
+            margin-right: 15px;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
         .wrapper{ width: 360px; padding: 20px; }
+        #navigation{
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <!-- Navbar content -->
+        <a class="navbar-brand" href="../index.php">
+            <img src="images/key.png" width="30" height="30" alt="">
+            Viruscheck
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/about.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/templates/faq.php">FAQ</a>
+                </li>
+            </ul>
+        </div>
+        <a href="main.php" class="btn btn-outline-info d-flex align-items-center">
+            <ion-icon name="arrow-back-outline"></ion-icon>Back
+        </a>
+    </nav>
+</header>
+
+<main>
 <div class="wrapper">
     <h2>Reset Password</h2>
     <p>Please fill out this form to reset your password.</p>
@@ -97,11 +152,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
             <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="navigation">
             <input type="submit" class="btn btn-primary" value="Submit">
-            <a class="btn btn-link ml-2" href="welcome.php">Cancel</a>
+            <a class="btn btn-link ml-2" href="account.php">Cancel</a>
         </div>
     </form>
 </div>
+</main>
 </body>
 </html>

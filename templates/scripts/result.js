@@ -94,7 +94,11 @@ function initValues () {
     zillya_result.innerHTML = zillya ? `<strong style="color: red;">${zillya}</strong>` : '<strong style="color: green;">Clean</strong>'
 }
 
+const main = document.getElementById('main');
+
+console.log(main.style);
 
 function getResponse(){
+    main.style.opacity = "1";
    initValues();
 }
